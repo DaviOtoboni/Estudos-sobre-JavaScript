@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="nuriaEdavi.ico" type="image/x-icon">
+        <title>Manipulando usando DOM</title>
+
+    </head>
+    
+    <body>
+
+        <h1 class = "haha">Titulo</h1><!--[0]-->
+
+        <p id = "sla">Paragrafo</p>
+
+        <h2>Mudanças</h2>
+
+        <p class = "haha">Muda aqui</p><!--[1]-->
+        <p class = "haha">Muda não</p><!--[2]-->
+        <p class = "haha">la, ele</p><!--[3]-->
+
+        <img id="Imagem" src="imagem.jpg" alt="Texto alternativo"><br><br>
+
+        <script>
+
+            document.getElementsByClassName('haha')
+            document.getElementsByTagName('h2')
+            //Para poder manipular usando ByClassname/ByTagName e necessario utilizar o '[]', indo do 0 a n, pois é como um array
+            //exemplo:
+            let x = document.getElementsByTagName('h2')
+            x[0].innerHTML = 'Mudando tudo'
+            let y = document.getElementsByClassName('haha')
+            y[3].innerHTML = 'la, elo'
+
+            //Outra maneira para fazer a manipulção é usando .querySelector
+            document.querySelectorAll('p.haha')
+
+            //Maneiras de retorno
+            console.log(document.baseURI)
+            console.log(document.body)
+            console.log(document.doctype)
+            console.log(document.documentURI)
+            console.log(document.domain)
+            console.log(document.head)
+            console.log(document.inputEncoding)
+            console.log(document.lastModified)
+            console.log(document.title)
+            console.log(document.URL)
+            console.log(document.forms)
+            console.log(document.links)
+            console.log(document.images)
+            console.log(document.scripts)
+
+            //Escrevendo na pagina de uma maneira diferente
+            document.write('Escrevendo com o .write')
+
+            //Alterar atributos
+            document.getElementById('Imagem').src = 'foto.jpg'
+            document.getElementById('Imagem').alt = 'Segundo Texto alternativo'
+
+            //Alterar css
+            document.getElementById('sla').style.background = 'red'
+            document.getElementById('sla').style.color = 'white'
+
+        </script>
+
+    </body>
+
+</html>

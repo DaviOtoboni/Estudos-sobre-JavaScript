@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+            div#x{
+                background-color: blueviolet;
+                color: white;
+                height: 100px;
+                width: 100px;
+                line-height: 100px;
+                text-align: center;
+                display: inline-block;/*ira deixar na mesma linha e em bloco(no caso da div)*/
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+
+        <!-- <div id = "x" onclick = "clicar()" onmouseenter = "entrou()" onmouseout = "saiu()" onmouseup = "up()" onmousedown = "down()">HAHAHA</div> envento dentro de HTML-->
+
+        <div id = "x"></div>
+
+        <div id = "y"></div>
+
+        <div id = "z"></div>
+
+
+        <script>
+            //evento dentro de javascript
+            x.addEventListener('mouseup', up)
+            x.addEventListener('mouseenter', entrou)
+
+
+            let a = document.getElementById('x')
+            function clicar(){
+            //a.style.backgroundColor = 'red'
+            }
+            function entrou(){
+            a.style.backgroundColor = 'deeppink'
+            a.innerText = ''
+            }
+            function saiu(){
+            a.style.backgroundColor = 'deeppink'
+            }
+            function up(){
+            a.style.backgroundColor = 'deeppink'
+            }
+            function down(){
+            a.style.backgroundColor = 'deeppink'
+
+            }
+
+        </script>
+        
+    </body>
+</html>
